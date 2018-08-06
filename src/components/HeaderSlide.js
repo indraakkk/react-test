@@ -9,17 +9,17 @@ import {
 
 const items = [
     {
-        src: 'data:image/svg+xml;charset=UTF-8,<svg%20width%3D"800"%20height%3D"400"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20viewBox%3D"0%200%20800%20400"%20preserveAspectRatio%3D"none"><defs><style%20type%3D"text%2Fcss">%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20<%2Fstyle><%2Fdefs><g%20id%3D"holder_15ba800aa20"><rect%20width%3D"800"%20height%3D"400"%20fill%3D"%23666"><%2Frect><g><text%20x%3D"247.3203125"%20y%3D"218.3">First%20slide<%2Ftext><%2Fg><%2Fg><%2Fsvg>',
+        src:require("./Assets/dark1.jpg"),
         altText: 'Dark One',
         captions: "Dark One"
     },
     {
-        src: 'data:image/svg+xml;charset=UTF-8,<svg%20width%3D"800"%20height%3D"400"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20viewBox%3D"0%200%20800%20400"%20preserveAspectRatio%3D"none"><defs><style%20type%3D"text%2Fcss">%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20<%2Fstyle><%2Fdefs><g%20id%3D"holder_15ba800aa20"><rect%20width%3D"800"%20height%3D"400"%20fill%3D"%23666"><%2Frect><g><text%20x%3D"247.3203125"%20y%3D"218.3">Second%20slide<%2Ftext><%2Fg><%2Fg><%2Fsvg>',
+        src:require('./Assets/dark2.jpg'),
         altText: 'Dark Two',
         captions: 'Dark Two'
     },
     {
-        src: 'data:image/svg+xml;charset=UTF-8,<svg%20width%3D"800"%20height%3D"400"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20viewBox%3D"0%200%20800%20400"%20preserveAspectRatio%3D"none"><defs><style%20type%3D"text%2Fcss">%23holder_15ba800aa20%20text%20%7B%20fill%3A%23444%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20<%2Fstyle><%2Fdefs><g%20id%3D"holder_15ba800aa20"><rect%20width%3D"800"%20height%3D"400"%20fill%3D"%23666"><%2Frect><g><text%20x%3D"247.3203125"%20y%3D"218.3">Third%20slide<%2Ftext><%2Fg><%2Fg><%2Fsvg>',
+        src:require('./Assets/dark3.jpg'),
         altText: 'Dark Three',
         captions: 'Dark Three'
     }
