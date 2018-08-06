@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import NavbarTop from './components/NavbarTop';
-import HeaderSlide from './components/HeaderSlide';
-import Cards from './components/Cards';
+// import HeaderSlide from './components/HeaderSlide';
+// import Cards from './components/Cards';
 
 export default class App extends Component{
 
@@ -9,8 +9,8 @@ export default class App extends Component{
         return(
             <div>
                 <NavbarTop />
-                <HeaderSlide />
-                <Cards />
+                {/* <div><HeaderSlide /></div>
+                <div><Cards /></div> */}
             </div>
         ) 
     }

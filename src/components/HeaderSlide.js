@@ -1,5 +1,16 @@
 import React, {Component} from 'react'
 import {
+    Card,
+    Button,
+    CardTitle,
+    CardText,
+    CardDeck,
+    CardBody,
+    CardSubtitle,
+    Row
+} from 'reactstrap';
+
+import {
     Carousel,
     CarouselItem,
     CarouselControl,
@@ -78,6 +89,7 @@ export default class HeaderSlide extends Component{
         })
 
         return(
+        <div>
             <Carousel
             activeIndex={activeIndex}
             next={this.next}
@@ -88,6 +100,36 @@ export default class HeaderSlide extends Component{
                 <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
                 <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
             </Carousel>
+
+            <Row className="m-5">
+            <CardDeck>
+                <Card>
+                    <CardBody>
+                        <CardTitle>Card title</CardTitle>
+                        <CardSubtitle>Card subtitle</CardSubtitle>
+                        <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                        <Button>Button</Button>
+                    </CardBody>
+                </Card>
+                <Card>
+                <CardBody>
+                    <CardTitle>Card title</CardTitle>
+                    <CardSubtitle>Card subtitle</CardSubtitle>
+                    <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                    <Button>Button</Button>
+                </CardBody>
+                </Card>
+                <Card>
+                    <CardBody>
+                        <CardTitle>Card title</CardTitle>
+                        <CardSubtitle>Card subtitle</CardSubtitle>
+                        <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                        <Button>Button</Button>
+                    </CardBody>
+                </Card>
+            </CardDeck>
+            </Row>
+        </div>
         )
     }
 }
