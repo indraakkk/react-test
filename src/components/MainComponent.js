@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-import Home from '../components/HeaderSlide'
+import Home from './HeaderSlide'
 import Profile from '../pages/Profile'
 import Coffee from '../pages/Coffee'
 import Glass from '../pages/Profile'
 import Saucer from '../pages/Profile'
+import Footers from './Footers'
+import './MainComponent.css'
 import{
   Collapse,
   Navbar,
@@ -20,7 +22,7 @@ import{
 import{
   Route,
   Link,
-  HashRouter
+  BrowserRouter
 } from 'react-router-dom'
 
 export default class NavbarTop extends Component{
@@ -39,39 +41,28 @@ export default class NavbarTop extends Component{
   }
     render() {
       return (
-      <HashRouter>
+      <BrowserRouter>
         <div>
+          {/* navbar section/header */}
           <Navbar color='dark' light expand='md'>
-            <NavbarBrand className='text-light'>
-              <NavLink>
-                <Link className='text-light' to='/'>Indra ReactJs</Link>
-              </NavLink>
-            </NavbarBrand>
+            <NavbarBrand className='text-light brandfonts' tag={Link} to='/'>Indra ReactJs</NavbarBrand>
             <NavbarToggler className='bg-light' onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className='ml-auto' navbar>
                 <NavItem>
-                  <NavLink>
-                    <Link className='text-light' to='/profile'>Profile</Link>
-                  </NavLink>
+                  <NavLink className='text-light brandfonts' tag={Link} to='/profile'>Profile</NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle className='text-light' nav caret>Espresso</DropdownToggle>
+                  <DropdownToggle className='text-light brandfonts' nav caret>Portfolio</DropdownToggle>
                   <DropdownMenu right>
                     <DropdownItem>
-                      <NavLink>
-                        <Link to='/coffee'>Coffee</Link>
-                      </NavLink>
+                      <NavLink tag={Link} to='/coffee'>Coffee</NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <NavLink>
-                        <Link to='/glass'>Glass</Link>
-                      </NavLink>
+                      <NavLink tag={Link} to='/glass'>Glass</NavLink>
                     </DropdownItem>
                     <DropdownItem>
-                      <NavLink>
-                        <Link to='/saucer'>Saucer</Link>
-                      </NavLink>
+                      <NavLink tag={Link} to='/saucer'>Saucer</NavLink>
                     </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>Reset</DropdownItem>
@@ -85,8 +76,11 @@ export default class NavbarTop extends Component{
           <Route path='/coffee' component={Coffee} />
           <Route path='/glass' component={Glass} />
           <Route path='/saucer' component={Saucer} />
+
+          {/* footer section */}
+          <Footers />
         </div>
-      </HashRouter>
+      </BrowserRouter>
     )
   }
 }

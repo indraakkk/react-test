@@ -1,3 +1,8 @@
+html,
+body{
+  height: 100%;
+  position: relative;
+}
 .App {
   text-align: center;
 }
@@ -26,3 +31,18 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.footers {
+  height: 100px;
+  margin: 0px auto !important;
+  bottom: 0%;
+  top: auto;
+  /* color: white; */
+}
+
+ul
+li{
+  /* display: inline; */
+  margin-top: 10px;
+}
+

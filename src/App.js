@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import NavbarTop from './components/NavbarTop';
+import MainComponent from './components/MainComponent';
+import './App.css'
 
 
 export default class App extends Component{
@@ -7,7 +8,7 @@ export default class App extends Component{
     render(){
       return(
       <div>
-        <NavbarTop />
+        <MainComponent />
       </div>
     ) 
   }

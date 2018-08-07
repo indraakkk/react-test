@@ -7,7 +7,8 @@ import {
   CardDeck,
   CardBody,
   CardSubtitle,
-  Row
+  Row,
+  Container
 } from 'reactstrap';
 
 import {
@@ -39,7 +40,7 @@ const items = [
 
 export default class HeaderSlide extends Component{
     constructor(props) {
-    super(props);
+      super(props);
     this.state = {activeIndex: 0}
       this.next = this.next.bind(this)
       this.previous = this.previous.bind(this)
@@ -51,11 +52,11 @@ export default class HeaderSlide extends Component{
       this.animating = true;
   }
     onExited(){
-      this.animating = false;
+    this.animating = false;
   }
   next(){
     if(this.animating) {
-      return; 
+          return; 
       }
     const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
 
@@ -65,13 +66,13 @@ export default class HeaderSlide extends Component{
     if(this.animating) {
       return;
         }
-    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+      const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
 
-    this.setState({activeIndex: nextIndex})
+      this.setState({activeIndex: nextIndex})
   }
     goToIndex(newIndex){
     if(this.animating) {
-            return; 
+      return; 
         }
     this.setState({activeIndex: newIndex})
   }
@@ -84,12 +85,14 @@ export default class HeaderSlide extends Component{
         key={item.src}
       >
         <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.captions} captionHeader={item.captions} />
+        <CarouselCaption captionText={item.captions} />
       </CarouselItem>)
 
     return(
       <div>
+        {/* slider */}
         <Carousel
+          className='text-center bg-darks'
           activeIndex={activeIndex}
           next={this.next}
           previous={this.previous}
@@ -100,34 +103,37 @@ export default class HeaderSlide extends Component{
           <CarouselControl direction='next' directionText='Next' onClickHandler={this.next} />
         </Carousel>
 
-        <Row className='m-5'>
-          <CardDeck>
-            <Card>
-              <CardBody>
-                <CardTitle>Card title</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                <Button>Button</Button>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody>
-                <CardTitle>Card title</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                <Button>Button</Button>
-              </CardBody>
-            </Card>
-            <Card>
-              <CardBody>
-                <CardTitle>Card title</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
-                <Button>Button</Button>
-              </CardBody>
-            </Card>
-          </CardDeck>
-        </Row>
+        {/* card */}
+        <Container>
+          <Row className='mt-3 m-1'>
+            <CardDeck>
+              <Card>
+                <CardBody>
+                  <CardTitle>Card title</CardTitle>
+                  <CardSubtitle>Card subtitle</CardSubtitle>
+                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                  <Button>Button</Button>
+                </CardBody>
+              </Card>
+              <Card>
+                <CardBody>
+                  <CardTitle>Card title</CardTitle>
+                  <CardSubtitle>Card subtitle</CardSubtitle>
+                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                  <Button>Button</Button>
+                </CardBody>
+              </Card>
+              <Card>
+                <CardBody>
+                  <CardTitle>Card title</CardTitle>
+                  <CardSubtitle>Card subtitle</CardSubtitle>
+                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</CardText>
+                  <Button>Button</Button>
+                </CardBody>
+              </Card>
+            </CardDeck>
+          </Row>
+        </Container>
       </div>
         )
   }

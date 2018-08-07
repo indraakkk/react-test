@@ -1,4 +1,13 @@
 .carousel-item > img{
     object-fit: cover;
-    width: 100%;
+}
+
+.bg-darks{
+    background-color: black!important;
+}
+
+@media (max-height: 640){
+    .carousel-item > img{
+        height: 300px;
+    }
 }
