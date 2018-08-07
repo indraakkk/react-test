@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Button, CardTitle, CardText, CardDeck, CardBody, CardSubtitle, Row } from 'reactstrap';
 
-const Cards = (props) => {
+const Cards = (props)=> {
   return (
     <Row className="m-5">
     <CardDeck>
