@@ -11,6 +11,7 @@ import{
     NavbarBrand,
     Nav,
     NavItem,
+    NavLink,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
@@ -18,7 +19,7 @@ import{
 } from 'reactstrap';
 import{
     Route,
-    NavLink,
+    Link,
     HashRouter
 } from 'react-router-dom'
 
@@ -37,44 +38,54 @@ export default class NavbarTop extends Component{
         })
     }
     render() {
-     return (
-      <HashRouter>
+        return (
+        <HashRouter>
         <div>
-          <Navbar color="dark" light expand="md">
+            <Navbar color="dark" light expand="md">
             <NavbarBrand className="text-light">
-                <NavLink className="text-light" to="/">Indra ReactJs</NavLink>
+                <NavLink>
+                    <Link className="text-light" to="/">Indra ReactJs</Link>
+                </NavLink>
             </NavbarBrand>
-              <NavbarToggler className="bg-light" onClick={this.toggle} />
-                <Collapse isOpen={this.state.isOpen} navbar>
-                  <Nav className="ml-auto" navbar>
-                    <NavItem>
-                      <NavLink className="text-light" to="/profile">Profile</NavLink>
-                    </NavItem>
-                        <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle className="text-light" nav caret>Espresso</DropdownToggle>
-                              <DropdownMenu right>
-                                <DropdownItem>
-                                    <NavLink to="/coffee">Coffee</NavLink>
-                                </DropdownItem>
-                                <DropdownItem>
-                                    <NavLink to="/glass">Glass</NavLink>
-                                </DropdownItem>
-                                <DropdownItem>
-                                    <NavLink to="/saucer">Saucer</NavLink>
-                                </DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem>Reset</DropdownItem>
-                              </DropdownMenu>
-                        </UncontrolledDropdown>
-                  </Nav>
-                </Collapse>
-              </Navbar>
-              <Route exact path='/' component={Home} />
-              <Route path='/profile' component={Profile} />
-              <Route path='/coffee' component={Coffee} />
-              <Route path='/glass' component={Glass} />
-              <Route path='/saucer' component={Saucer} />
-          </div>
+                <NavbarToggler className="bg-light" onClick={this.toggle} />
+                    <Collapse isOpen={this.state.isOpen} navbar>
+                        <Nav className="ml-auto" navbar>
+                            <NavItem>
+                            <NavLink>
+                                <Link className="text-light" to="/profile">Profile</Link>
+                            </NavLink>
+                            </NavItem>
+                                <UncontrolledDropdown nav inNavbar>
+                                    <DropdownToggle className="text-light" nav caret>Espresso</DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem>
+                                            <NavLink>
+                                                <Link to="/coffee">Coffee</Link>
+                                            </NavLink>
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <NavLink>
+                                                <Link to="/glass">Glass</Link>
+                                            </NavLink>
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <NavLink>
+                                                <Link to="/saucer">Saucer</Link>
+                                            </NavLink>
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>Reset</DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledDropdown>
+                        </Nav>
+                    </Collapse>
+                </Navbar>
+                <Route exact path='/' component={Home} />
+                <Route path='/profile' component={Profile} />
+                <Route path='/coffee' component={Coffee} />
+                <Route path='/glass' component={Glass} />
+                <Route path='/saucer' component={Saucer} />
+        </div>
         </HashRouter>
         )
     }
