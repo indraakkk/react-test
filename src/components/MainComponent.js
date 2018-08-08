@@ -5,6 +5,7 @@ import Coffee from '../pages/Coffee'
 import Glass from '../pages/Profile'
 import Saucer from '../pages/Profile'
 import Footers from './Footers'
+import RandomUser from '../rest-api/View'
 import './MainComponent.css'
 import{
   Collapse,
@@ -65,7 +66,9 @@ export default class NavbarTop extends Component{
                       <NavLink tag={Link} to='/saucer'>Saucer</NavLink>
                     </DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem>Reset</DropdownItem>
+                    <DropdownItem>
+                      <NavLink tag={Link} to='/randomuser'>Random User</NavLink>
+                      </DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </Nav>
@@ -76,6 +79,7 @@ export default class NavbarTop extends Component{
           <Route path='/coffee' component={Coffee} />
           <Route path='/glass' component={Glass} />
           <Route path='/saucer' component={Saucer} />
+          <Route path='/randomuser' component={RandomUser} />
 
           {/* footer section */}
           <Footers />
