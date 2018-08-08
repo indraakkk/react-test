@@ -4,7 +4,6 @@ import Profile from '../pages/Profile'
 import Coffee from '../pages/Coffee'
 import Glass from '../pages/Profile'
 import Saucer from '../pages/Profile'
-import Footers from './Footers'
 import RandomUser from '../rest-api/View'
 import './MainComponent.css'
 import{
@@ -82,7 +81,6 @@ export default class NavbarTop extends Component{
           <Route path='/randomuser' component={RandomUser} />
 
           {/* footer section */}
-          <Footers />
         </div>
       </BrowserRouter>
     )
