@@ -4,6 +4,7 @@ import Profile from '../pages/Profile'
 import Coffee from '../pages/Coffee'
 import Glass from '../pages/Profile'
 import Saucer from '../pages/Profile'
+import Fourcampus from '../campus-api/Fourcampus'
 import RandomUser from '../rest-api/View'
 import './MainComponent.css'
 import{
@@ -64,6 +65,9 @@ export default class NavbarTop extends Component{
                     <DropdownItem>
                       <NavLink tag={Link} to='/saucer'>Saucer</NavLink>
                     </DropdownItem>
+                    <DropdownItem>
+                      <NavLink tag={Link} to='/4campus'>4campus</NavLink>
+                    </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>
                       <NavLink tag={Link} to='/randomuser'>Random User</NavLink>
@@ -79,6 +83,7 @@ export default class NavbarTop extends Component{
           <Route path='/glass' component={Glass} />
           <Route path='/saucer' component={Saucer} />
           <Route path='/randomuser' component={RandomUser} />
+          <Route path='/4campus' component={Fourcampus} />
 
           {/* footer section */}
         </div>
