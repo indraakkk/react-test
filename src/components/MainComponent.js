@@ -4,7 +4,7 @@ import Profile from '../pages/Profile'
 import Coffee from '../pages/Coffee'
 import Glass from '../pages/Profile'
 import Saucer from '../pages/Profile'
-import Fourcampus from '../campus-api/Fourcampus'
+import Fourcampus from '../campus-api/Forcampus'
 import RandomUser from '../rest-api/View'
 import './MainComponent.css'
 import{

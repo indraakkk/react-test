@@ -12,11 +12,12 @@ class Background extends Component{
     fetch('https://randomuser.me/api/?results=48')
     .then((results)=> results.json())
       .then((data)=> {
-          let pictures = data.results.map((pic)=> <div className='m-1' key={pic.results}>
-          <img src={pic.picture.medium} alt='randomuser' />
-        </div>)
+          let pictures = data.results.map((pic)=>
+            <div className='m-1' key={pic.results}>
+              <img src={pic.picture.medium} alt='randomuser' />
+            </div>)
 
-        this.setState({pictures})
+        this.setState({pictures: pictures})
           console.log("state", this.state.pictures)
       })
     }
