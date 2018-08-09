@@ -21,8 +21,8 @@ class Fourcampus extends Component{
     axios.get('http://localhost:8080/fourcampus/campuses')
     .then(res=> {
       const campuses = res.data.map((campuses)=>
-        <div key={campuses._id}>
-          <div className="card text-white bg-dark m-3" style={cardWidth}>
+        <div className='card-deck m-2' key={campuses._id}>
+          <div className="card text-white bg-dark mb-3" style={cardWidth}>
             <div className="card-body">
               <h5 className="card-header">{campuses.name_campus}</h5>
               <h6 className="card-title text-light">{campuses.city_campus}</h6>
@@ -40,8 +40,8 @@ class Fourcampus extends Component{
 
   render(){
       return(
-          <div className='container'>
-            <div className='row'>
+          <div className='container m-3'>
+            <div className='row justify-content-center'>
             {this.state.campuses}
             </div>
           </div>
